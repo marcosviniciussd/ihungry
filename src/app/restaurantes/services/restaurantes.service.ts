@@ -1,18 +1,22 @@
+import { first, delay, tap } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Restaurante } from '../model/restaurante';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestaurantesService {
 
-  constructor() { }
+  private readonly API = '/assets/restaurantes.json';
 
-  list(): Restaurante[] {
-    return[
-      {_id: "1", name: "Carne na Pedra", category: "Restaurante" },
-      {_id: "2", name: "Pilão Mineiro", category: "Restaurante" },
-      {_id: "1", name: "O Corvo e a Rosa", category: "Bar" }
-    ];
+  constructor(private httpClient: HttpClient) { }
+
+  list() {
+    return this.httpClient.get<Restaurante[]>(this.API)
+    .pipe(first(),
+    delay(1000),
+    tap(restaurantes => console.log(restaurantes)));
+    //return this.httpClient.get<Restaurante[]>(this.API);
   }
 }
