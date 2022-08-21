@@ -4,6 +4,7 @@
   </mat-toolbar>
   <div *ngIf="restaurantes$ | async as restaurantes; else loading">
     <table mat-table [dataSource]="restaurantes" class="mat-elevation-z8">
+
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef>Nome</th>
