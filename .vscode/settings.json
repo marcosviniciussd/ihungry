@@ -1,11 +1,18 @@
 {
     "cSpell.words": [
+        "Cancelar",
+        "carregar",
         "Categoria",
         "Disponíveis",
+        "Erro",
+        "Pizzaria",
         "restaurante",
         "Restaurante",
         "restaurantes",
-        "Restaurantes"
+        "Restaurantes",
+        "Salvar",
+        "Sucess",
+        "sucesso"
     ],
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#ab307e",

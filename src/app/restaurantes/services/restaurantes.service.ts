@@ -19,4 +19,9 @@ export class RestaurantesService {
     tap(restaurantes => console.log(restaurantes)));
     //return this.httpClient.get<Restaurante[]>(this.API);
   }
+
+  save(record: Restaurante) {
+   //console.log(record);
+   return this.httpClient.post<Restaurante>(this.API, record).pipe(first());
+  }
 }

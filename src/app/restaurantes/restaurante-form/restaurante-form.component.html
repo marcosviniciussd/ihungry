@@ -1,0 +1,31 @@
+<mat-card class="example-card">
+
+  <mat-toolbar color="primary">Detalhe do Restaurante</mat-toolbar>
+
+  <mat-card-content>
+
+    <form action="" [formGroup]="form" class="min-width">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Nome" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Categoria</mat-label>
+        <mat-select formControlName="category">
+          <mat-option value="null"> </mat-option>
+          <mat-option value="Restaurante">Restaurante</mat-option>
+          <mat-option value="Bar">Bar</mat-option>
+          <mat-option value="Pizzaria">Pizzaria</mat-option>
+          <mat-option value="Café">Café</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-raised-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+
+</mat-card>
