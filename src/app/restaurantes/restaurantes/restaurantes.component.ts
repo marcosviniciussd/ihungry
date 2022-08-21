@@ -28,7 +28,6 @@ export class RestaurantesComponent implements OnInit {
     .pipe(
       catchError(error => {
         this.onError('Erro ao carregar restaurantes.');
-        //console.log(error);
         return of([])
       })
     );
