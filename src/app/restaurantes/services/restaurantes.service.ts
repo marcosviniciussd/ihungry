@@ -20,7 +20,7 @@ export class RestaurantesService {
     //return this.httpClient.get<Restaurante[]>(this.API);
   }
 
-  save(record: Restaurante) {
+  save(record: Partial<Restaurante>) {
    //console.log(record);
    return this.httpClient.post<Restaurante>(this.API, record).pipe(first());
   }
